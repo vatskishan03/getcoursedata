@@ -66,7 +66,7 @@
         const difficulty = document.getElementById('difficulty').value;
         const rating = document.getElementById('rating').value;
 
-        fetch('/courses', {
+        fetch('https://coursesapi-nin4.onrender.com/courses', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
