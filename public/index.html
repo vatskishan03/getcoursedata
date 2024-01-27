@@ -66,7 +66,7 @@
         const difficulty = document.getElementById('difficulty').value;
         const rating = document.getElementById('rating').value;
 
-        fetch('https://course-lcpp.onrender.com/courses', {
+        fetch('/courses', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

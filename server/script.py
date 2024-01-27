@@ -1,9 +1,11 @@
 import pandas as pd
 import sys
 import json
+import os
 
-file = pd.read_csv('./server/excelfile.csv')
-
+script_directory = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_directory, 'excelfile.csv')
+file = pd.read_csv(file_path)
 
 def filter_df(input_df, company, difficulty, rating):
     try:
@@ -16,7 +18,6 @@ def filter_df(input_df, company, difficulty, rating):
     except KeyError:
         print("Enter Correct compName")
         return pd.DataFrame()
-
 
 company = sys.argv[1]
 difficulty = sys.argv[2]
