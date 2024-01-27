@@ -1,0 +1,10 @@
+# Node.js
+node_modules/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+yarn-error.log
+npm-debug.log

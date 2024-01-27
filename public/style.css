@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#inputForm {
+    display: block;
+}
+
+#resultTable {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+#courseTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#courseTable th, #courseTable td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#courseTable th {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+#tableBody tr:nth-child(even) {
+    background-color: #d1dada;
+}
+
+.card {
+    background-color: hsl(180, 18%, 90%);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center; 
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+label, select, button {
+    margin: 10px 0;
+    display: block;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+}
+label {
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    background-color: #C25200;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 100px;
+}
+
+button:hover {
+    background-color:#000000;
+}
+
