@@ -4,7 +4,7 @@
     "main": "app.js",
     "scripts": {
       "start": "node app.js",
-      "build": "npm run build"
+      "build": "echo 'No build required'"
     },
     "dependencies": {
       "express": "^4.17.1",
