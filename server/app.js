@@ -2,12 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { spawn } = require('child_process');
 const path = require('path'); 
-const cors = require('cors');
 
 const app = express();
 const port = 3000;
 
-app.use(cors()); 
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
