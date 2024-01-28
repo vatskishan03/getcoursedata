@@ -14,7 +14,7 @@ def filter_df(input_df, company, difficulty, rating):
             (input_df['Difficulty'] == difficulty) &
             (input_df['Ratings'] >= rating)
         ]
-        return filtered_data[['Course_Name', 'Ratings', 'Link']]
+        return filtered_data[['Course_Name', 'Ratings', 'Link']].sort_values(by='Ratings', ascending=False)
     except KeyError:
         print("Enter Correct compName")
         return pd.DataFrame()
