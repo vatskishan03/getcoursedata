@@ -1,20 +1,18 @@
 {
-    "name": "courseraproject-with-link",
-    "version": "1.0.0",
-    "scripts": {
-      "build": "npm run build:client && npm run build:server",
-      "build:client": "parcel build public/index.html",
-      "build:server": "python script.py"
-    },
-    "main": "app.js",
-    "output": "scripts.py",
-    "dependencies": {
-      "express": "^4.17.1",
-      "body-parser": "^1.19.0",
-      "csv-parser": "^3.0.0",
-      "python-shell": "*",
-      "cors": "^2.8.5"
-    }
+  "name": "courseraproject-with-link",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js", 
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "parcel build public/index.html",
+    "build:server": "python script.py"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "csv-parser": "^3.0.0",
+    "python-shell": "*",
+    "cors": "^2.8.5"
   }
-  
-  
+}
