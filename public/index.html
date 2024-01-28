@@ -43,8 +43,8 @@
             <option value="4.5">4.5 and above</option>   
         </select>
 
-        <button type="button" onclick="getFilteredCourses()">Search</button>
-    </form>
+       <button type="button" onclick="getFilteredCourses()">Search</button>
+</form>
 </div>
 <div id="resultTable" class="card">
     <table id="courseTable">
@@ -66,8 +66,8 @@
         const difficulty = document.getElementById('difficulty').value;
         const rating = document.getElementById('rating').value;
 
-        fetch('
-https://coursedata.vercel.app/courses', {
+        
+        fetch('https://coursedata.vercel.app/courses', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ https://coursedata.vercel.app/courses', {
 
     function updateTable(data) {
         const tableBody = document.getElementById('tableBody');
-        const resultTable = document.getElementById('resultTable');
+        const resultTable = document.getElementById('resultTable')
 
         tableBody.innerHTML = '';
         if (data.length === 0) {
