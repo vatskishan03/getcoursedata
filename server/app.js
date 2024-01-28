@@ -20,7 +20,7 @@ app.get('/public/style.css', (req, res) => {
 });
 
 
-app.post('/courses', (req, res) => {
+app.post('https://coursedata.vercel.app/courses', (req, res) => {
     const { company, difficulty, rating } = req.body;
 
     const pythonProcess = spawn('python', [path.join(__dirname, 'script.py'), company, difficulty, rating]);
