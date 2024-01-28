@@ -1,11 +1,13 @@
 {
     "name": "courseraproject-with-link",
     "version": "1.0.0",
-    "main": "app.js",
     "scripts": {
-      "start": "node app.js",
-      "build": "npm install && pip install -r requirements.txt"
+      "build": "npm run build:client && npm run build:server",
+      "build:client": "parcel build public/index.html",
+      "build:server": "python script.py"
     },
+    "main": "app.js",
+    "output": "dist",
     "dependencies": {
       "express": "^4.17.1",
       "body-parser": "^1.19.0",
@@ -14,4 +16,5 @@
       "cors": "^2.8.5"
     }
   }
+  
   
