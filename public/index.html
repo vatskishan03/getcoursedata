@@ -43,8 +43,8 @@
             <option value="4.5">4.5 and above</option>   
         </select>
 
-        <button type="button" onclick="getFilteredCourses()">Search</button>
-    </form>
+       <button type="button" onclick="getFilteredCourses()">Search</button>
+</form>
 </div>
 <div id="resultTable" class="card">
     <table id="courseTable">
@@ -66,26 +66,31 @@
         const difficulty = document.getElementById('difficulty').value;
         const rating = document.getElementById('rating').value;
 
-        fetch('/courses', {
+        
+        fetch("/courses", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ company, difficulty, rating }),
         })
-        .then(response => response.json())
+        .then(response => {
+        console.log('Response Status:', response.status);
+        return response.json();
+    })
         .then(data => {
+            console.log('Response:', data);
             updateTable(data);
             document.getElementById('resultTable').style.display = 'table';
         })
         .catch(error => {
-            console.error('Error:', error);
-        });
+        console.error('Fetch Error:', error);
+    });
     }
 
     function updateTable(data) {
         const tableBody = document.getElementById('tableBody');
-        const resultTable = document.getElementById('resultTable');
+        const resultTable = document.getElementById('resultTable')
 
         tableBody.innerHTML = '';
         if (data.length === 0) {

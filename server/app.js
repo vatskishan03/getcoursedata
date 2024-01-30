@@ -4,10 +4,11 @@ const { spawn } = require('child_process');
 const path = require('path'); 
 const cors = require('cors');
 
+app.use(cors());
+
 const app = express();
 const port = 3000;
 
-app.use(cors()); 
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
@@ -20,7 +21,7 @@ app.get('/public/style.css', (req, res) => {
 });
 
 
-app.post('/courses', (req, res) => {
+app.post("/courses", (req, res) => {
     const { company, difficulty, rating } = req.body;
 
     const pythonProcess = spawn('python', [path.join(__dirname, 'script.py'), company, difficulty, rating]);
