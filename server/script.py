@@ -3,6 +3,7 @@ import sys
 import json
 import os
 
+print("Python script started") 
 script_directory = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(script_directory, 'excelfile.csv')
 file = pd.read_csv(file_path)
