@@ -55,3 +55,9 @@ app.post('/courses', (req, res) => {
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
+
+
+// "scripts": {
+    //   "start": "node app.js",
+    //   "build": "npm install && pip install -r requirements.txt"
+    // },
