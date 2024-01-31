@@ -31,5 +31,3 @@ for course in courses_list:
     course['Link'] = course['Link']
 
 print(json.dumps(courses_list))
-
-print("Pyhton executed")
